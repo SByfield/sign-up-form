@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOP Sign up Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="img-wrapper">
+      <div class="top-logo-wrapper">
+        <img
+          src="./Images/top-logo.png"
+          alt="The Odin Project Logo"
+          class="top-logo"
+        />
+        <span>ODIN</span>
+      </div>
+      <div class="img-credit-wrapper">
+        Photo by
+        <a
+          class="img-credit"
+          href="https://unsplash.com/@idwyss?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        >
+          Kelsey He
+        </a>
+        on
+        <a
+          class="img-credit"
+          href="https://unsplash.com/photos/purple-flower-in-macro-shot-dmpv8cLlQAA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        >
+          Unsplash
+        </a>
+      </div>
+    </div>
+    <div class="form-wrapper">
+      <div class="form-header-quote">
+        <p>
+          “Just like the Lotus... We too Have the Ability to Rise from the Mud,
+          Bloom out of the Darkness and Radiate into the World.”
+        </p>
+      </div>
+      <form action="#" method="get">
+        <h3>Begin your Journey!</h3>
+        <div class="form-group">
+          <div class="form-field">
+            <label for="first-name">First name</label>
+            <input
+              required
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="John"
+            />
+            <span class="invalid-name"></span>
+          </div>
+          <div class="form-field">
+            <label for="last-name">Last name</label>
+            <input
+              required
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Smith"
+            />
+            <span class="invalid-name"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input
+              required
+              type="email"
+              name="email"
+              id="email"
+              placeholder="john.smith@email.com"
+              pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+            />
+            <span class="error invalid-email"></span>
+          </div>
+          <div class="form-field">
+            <label for="phone-number">Phone number</label>
+            <input
+              type="tel"
+              name="phone-number"
+              id="phone-number"
+              placeholder="555-555-5555"
+              pattern="^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+              minlength="10"
+            />
+            <span class="error invalid-phone-number"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input
+              required
+              type="password"
+              name="password"
+              id="password"
+              placeholder="8+ Characters"
+              minlength="8"
+            />
+            <span class="error invalid-password"></span>
+          </div>
+          <div class="form-field">
+            <label for="pw-confirm">Confirm Password</label>
+            <input
+              required
+              type="password"
+              name="pw-confirm"
+              id="pw-confirm"
+              placeholder="8+ Characters"
+              minlength="8"
+            />
+            <span class="error pw-confirm"></span>
+          </div>
+        </div>
+      </form>
+      <div class="bottom-section">
+        <input type="submit" value="Create Account" class="btn" />
+        <p>
+          Already have an account?
+          <a href="#" class="log-in">Log in</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

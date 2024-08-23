@@ -1,0 +1,234 @@
+@font-face {
+    font-family: "montserrat-regular";
+    src: url(./Fonts/montserratalternates-regular-webfont.woff),
+         url(./Fonts/montserratalternates-regular-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "kaushanscript" ;
+    src: url(./Fonts/kaushanscript-regular-webfont.woff),
+         url(./Fonts/kaushanscript-regular-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "norse";
+    src: url(./Fonts/norse-bold-webfont.woff),
+         url(./Fonts/norse-bold-webfont.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root{
+    --clr-valid:  #bdb95d; 
+    --clr-invalid: red; 
+    --clr-invald-text: red; 
+    --clr-input-border: #d8d8d8;
+    --clr-focus: blue; 
+    --clr-placeholder:  #c1c1c1;
+    --clr-form-bg: white; 
+    --clr-form-container-bg: whitesmoke; 
+    --clr-green: #2E5909;  
+    --clr-green-highlight: #A29D49; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"montserrat-regular", sans-serif;
+}
+
+.img-wrapper{
+  position: relative;
+  height: 100%;
+  width: 35%;
+  background-image:url(./Images/Lotus-Flower-top-signup-form.jpg); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-credit-wrapper{
+   position: absolute;
+   font-size: 14px;
+   text-align: center;
+   color: white;
+   width: 100%;
+   bottom: 15px;
+}
+
+.img-credit{
+    color: white;
+    font-size: 14px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+input{
+    appearance: none;
+    border: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+}
+
+.form-wrapper{
+    background-color: var(--clr-form-container-bg);
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-header-quote{
+    padding: 0em 4em;
+    position: relative;
+    bottom: 7em;
+}
+
+.form-header-quote p{
+    font-family: "kaushanscript", sans-serif;
+    font-size: 2.2em;
+    color: var(--clr-green);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.337);
+}
+
+
+form{
+    background-color: var(--clr-form-bg);
+    height: 25em;
+    width: 100%;
+    padding: 4em 4em;
+    align-self: center;
+    box-shadow: 0px 2px 5px 5px #9e9e9e4b;
+}
+
+.form-group{
+    display: flex;
+    gap: 5em; 
+    margin-bottom: 1em;
+    margin-top: 1.2em;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    width: 16em;
+}
+
+label{
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+input{
+    outline: 1px solid var(--clr-input-border);
+    border-radius: 3px;
+    margin-top: 0.3em;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+input:focus{
+    outline: 1px solid var(--clr-focus);
+    box-shadow: 3px 3px 4px  rgba(0,0,0,.2)
+}
+
+input:not(:placeholder-shown):valid{
+    outline: 1.5px solid var(--clr-valid)
+} 
+ 
+input:not(:placeholder-shown):invalid{
+    outline: 1.5px solid var(--clr-invalid);
+}
+
+.error{
+    height: .5em;
+    color: var(--clr-invald-text);
+    font-size: .7rem;
+    font-style: italic;
+    font-weight: 700;
+    padding-top: 3px;
+}
+
+input::placeholder{
+    color: var(--clr-placeholder);
+    font-style: italic;
+}
+
+input:not(:placeholder-shown):invalid + .invalid-email::after{
+    content: "* Please enter a valid email address";
+}
+
+input:not(:placeholder-shown):invalid + .invalid-phone-number::after{
+    content: "* Please enter a valid phone number";
+}
+
+input:not(:placeholder-shown):invalid + .invalid-password::after, 
+input:not(:placeholder-shown):invalid + .pw-confirm::after {
+    content: "* Password must be at least 8 characters";
+}
+
+.bottom-section{
+    padding: 2em 4em;
+}
+
+.btn{
+    background-color: var(--clr-green);
+    border: none;
+    color: white;
+    height: 3em;
+    border-radius: 3px;
+    margin-bottom: 1em;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    background-color: var(--clr-green-highlight);
+}
+
+.log-in{
+    text-decoration: none;
+    color: var(--clr-green);
+    font-weight: 800;
+
+    &:hover{
+        color: var(--clr-green-highlight);
+        text-decoration: underline;
+    }
+}
+
+.top-logo-wrapper{
+    width: 100%;
+    height: 10em;
+    background-color: rgba(0, 0, 0, 0.513);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10em;
+}
+
+.top-logo{
+    height: 7em;
+}
+
+.top-logo-wrapper > span{
+    font-family: "norse", sans-serif;
+    padding-left: 20px;
+    font-size: 6em;
+    color: white;
+}
